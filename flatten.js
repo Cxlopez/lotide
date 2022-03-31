@@ -25,20 +25,21 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 const flatten = function(array) {
-  let flatArr = [];
+  let output = [];
   for (let element of array) {
     //console.log(element);
     if (Array.isArray(element)) {
-      for (let element2 of element) {
-        //console.log(element2);
-        flatArr.push(element2);
+      for (let x of element) {
+        //console.log(x);
+        output.push(x);
       }
     } else {
-      flatArr.push(element);
+      //console.log(element);
+      output.push(element);
     }
   }
-  console.log(flatArr);
+  return output;
 };
 
 
-flatten([1, 2, [3, 4], 5, [6]]);// => [1, 2, 3, 4, 5, 6]
+console.log(flatten([1, 2, [3, 4], 5, [6]]));// => [1, 2, 3, 4, 5, 6]
