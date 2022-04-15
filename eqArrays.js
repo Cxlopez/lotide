@@ -1,27 +1,22 @@
-const assertEqual = function(actual, expected) {
-  
-  
-};
+const assertEqual = require('./assertEqual');
 
-const eqArrays = function(arr1, arr2,) {
-  if (JSON.stringify(arr1) === JSON.stringify(arr2)) {
-    console.log(true);
-  } else {
-    console.log(false);
+const eqArrays = function(arr1, arr2) {
+  let sameLength = arr1.length === arr2.length;
+  let sameResult = true;
+  // eslint-disable-next-line no-undef
+  for (i = 0; i < arr1.length; i++) {
+    // eslint-disable-next-line no-undef
+    if (arr1[i] !== arr2[i]) {
+      sameResult = false;
+    }
   }
-  /* if (JSON.stringify(arr1) === JSON.stringify(arr2)) {
+
+  if (sameResult && sameLength) {
     return true;
   } else {
     return false;
-  }*/
-  
+  }
 };
 
-eqArrays([1, 2, 3], [1, 2, 3]);// => true
-eqArrays([1, 2, 3], [3, 2, 1]);// => false
 
-eqArrays(["1", "2", "3"], ["1", "2", "3"]);// => true
-eqArrays(["1", "2", "3"], ["1", "2", 3]);// => false
-
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-
+module.exports = eqArrays;
