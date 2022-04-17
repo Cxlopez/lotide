@@ -32,13 +32,15 @@ const without = function(source, itemsToRemove) {
       filtered.push(item);
     }
   }
-  console.log(filtered);
+  return filtered;
 };
 
 
 
-const words = ["hello", "world", "lighthouse",];
-without(words, ["lighthouse", "world", "hello"]);
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
-without(["1", "2", "3"], ["1", 2, "3"]);
-without([1, 2, 3], [1]);
+// const words = ["hello", "world", "lighthouse",];
+// without(words, ["lighthouse", "world", "hello"]);
+// assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+// without(["1", "2", "3"], ["1", 2, "3"]);
+// without([1, 2, 3], [1]);
+
+module.exports = without;

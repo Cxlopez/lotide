@@ -1,4 +1,4 @@
-const words = ["ground", "control", "to", "major", "tom"];
+// const words = ["ground", "control", "to", "major", "tom"];
 
 const eqArrays = function(arr1, arr2,) {
   if (JSON.stringify(arr1) === JSON.stringify(arr2)) {
@@ -28,11 +28,14 @@ const map = function(array, callback) {
   return results;
 };
 
-const results1 = map(words, word => word[0]);
-assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
+// const results1 = map(words, word => word[0]);
+// assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
 
-const results2 = map(words, word => word[2]);
-assertArraysEqual(results2, ['o', 'n',,'j', 'm']);
+// const results2 = map(words, word => word[2]);
+// // eslint-disable-next-line no-sparse-arrays
+// assertArraysEqual(results2, ['o', 'n',,'j', 'm']);
 
-const results3 = map(words, word => word.length);
-assertArraysEqual(results3, [6,7,2,5,3]);
+// const results3 = map(words, word => word.length);
+// assertArraysEqual(results3, [6,7,2,5,3]);
+
+module.exports = map;

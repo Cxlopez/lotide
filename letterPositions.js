@@ -7,9 +7,10 @@ const letterPositions = function(sentence) {
     result[sentence[i]].push(i);
   }
 
-  delete result[" "];
   return result;
 };
 
-let random = "hello im hungry";
-console.log(letterPositions(random));
+// let random = "hello im hungry";
+// console.log(letterPositions(random));
+
+module.exports = letterPositions;
